@@ -17,7 +17,7 @@ RUN echo "deb http://packages.elasticsearch.org/elasticsearch/${ELASTICSEARCH_VE
 RUN apt-get update \
 	&& apt-get install elasticsearch=$ELASTICSEARCH_VERSION \
 	&& rm -rf /var/lib/apt/lists/* && \
-	/bin/sh /usr/share/elasticsearch/bin/plugin -install river-jdbc -url http://dl.bintray.com/jprante/elasticsearch-plugins/org/xbib/elasticsearch/plugin/elasticsearch-river-jdbc/2.3.1/#elasticsearch-river-jdbc-2.3.1.zip && \
+	/bin/sh /usr/share/elasticsearch/bin/plugin -install river-jdbc -url http://dl.bintray.com/jprante/elasticsearch-plugins/org/xbib/elasticsearch/plugin/elasticsearch-river-jdbc/2.3.1/elasticsearch-river-jdbc-2.3.1.zip && \
 	curl -o mysql-connector-java-5.1.28.zip -L 'http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.28.zip/from/http://cdn.mysql.com/' && \
 	unzip mysql-connector-java-5.1.28.zip && \
 	rm -f mysql-connector-java-5.1.28.zip && \
